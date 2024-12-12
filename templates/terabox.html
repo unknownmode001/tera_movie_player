@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <title>Tera Box Media Player</title>
+</head>
+<body>
+    <header>
+        <h1>Tera Box Media Player</h1>
+        <p>Paste the TeraBox link below</p>
+    </header>
+
+    <!-- Input Field and Play Button -->
+    <div class="input-group">
+        <input type="text" id="Teraurl" placeholder="Enter TeraBox URL">
+        <button onclick="fetchAndPlayMedia()">Play Media</button>
+    </div>
+
+    <!-- Embedded Video Player -->
+    <iframe 
+        id="videoPlayer"
+        src=""
+        title="Movie Player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+    <script>
+        /**
+         * Function to fetch and play media from TeraBox
+         */
+        async function fetchAndPlayMedia() {
+            // Get the URL from the input field
+            const fullUrl = document.getElementById('Teraurl').value;
+
+            // Validate the URL input
+            if (fullUrl.trim() === '') {
+                alert('Please enter a valid TeraBox URL!');
+                return;
+            }
+
+            // Extract the unique identifier from the URL
+            const urlParts = fullUrl.split('s/1');
+            const uniqueId = urlParts[1]; // This should give you the part after 's/'
+
+            // Set the iframe source to the TeraBox embed link using the uniqueId
+            const iframe = document.getElementById('videoPlayer');
+            iframe.src = `https://www.terabox.com/sharing/embed?surl=${uniqueId}&resolution=1080&autoplay=true&mute=false&uk=4400105884193&fid=91483455887823&slid=`;
+        }
+    </script>
+</body>
+</html>
