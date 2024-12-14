@@ -60,6 +60,7 @@ p {
 /* Input Container Styles */
 .input-container {
     position: relative;
+    padding-bottom: 15px;
     width: 70%;
     max-width: 600px;
     display: flex;
@@ -69,8 +70,8 @@ p {
 /* Input Field Styles */
 input[type="text"] {
     flex-grow: 1;
-    padding: 15px;
-    padding-right: 100px; /* Make space for toggle */
+    padding: 15px ;
+    padding-left: 15px; ;
     font-family: 'Roboto Mono', monospace;
     font-size: 1rem;
     border: 2px solid rgba(255, 69, 0, 0.5);
