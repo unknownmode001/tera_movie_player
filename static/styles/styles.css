@@ -218,7 +218,7 @@ iframe:hover {
 }
 
 .toggleContainer::before {
-    content: 'Multi ';
+    content: 'multi ';
     display: flex;
     align-items: center;
     justify-content: center;
