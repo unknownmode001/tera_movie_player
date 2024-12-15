@@ -1,44 +1,99 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General body styling */
+/* General styles for the body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
     padding: 20px;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a59);
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    overflow-x: hidden;
 }
 
-/* Header styling */
+/* Header styles */
 h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ff5c5c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Paragraph styling */
+/* Paragraph styles */
 p {
-    text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #b3b3cc;
+    letter-spacing: 0.5px;
 }
 
-/* Link (anchor) styling */
+
+
+/* Header styles */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ff5c5c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: neon-flash 1.5s infinite; /* Neon flash effect */
+}
+
+
+/* Paragraph styles */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #b3b3cc;
+    letter-spacing: 0.5px;
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+/* Adjust link styles to fit with the cursive theme */
 a {
     display: inline-block;
     margin: 10px;
-    padding: 10px 15px;
-    background-color: #007BFF;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    background-color: #0056b3;
+
+/* Button styles */
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #e04e4e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }
