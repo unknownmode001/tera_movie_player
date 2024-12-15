@@ -6,6 +6,11 @@ body {
     padding: 20px;
     background: linear-gradient(135deg, #1e1e2f, #3a3a59);
     color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 /* Header styles */
