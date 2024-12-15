@@ -88,7 +88,7 @@ button:active {
 
 @media (max-width: 768px) {
     body {
-        padding: 95%;
+        padding: 20px;
     }
 
     h1 {
@@ -105,9 +105,6 @@ button:active {
 @media (max-width: 480px) {
     h1 {
         font-size: 2rem;
-    }
-     body {
-        padding: 95%;
     }
 
 
